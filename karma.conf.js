@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = function (config) {
     config.set({
-        browsers: [ 'PhantomJS2' ],
+        browsers: [ 'Chrome', 'PhantomJS2' ],
         singleRun: true,
         frameworks: [ 'jasmine' ],
         reporters: [ 'dots' ],

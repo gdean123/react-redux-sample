@@ -4,7 +4,8 @@
   "description": "Sample project for using react and redux",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "test": "karma start --browsers PhantomJS2",
+    "debug": "karma start --browsers Chrome --single-run false"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,9 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.3.14",
+    "knuth-shuffle": "^1.0.1",
+    "lodash": "^3.10.1",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.6",
