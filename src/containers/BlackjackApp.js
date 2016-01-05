@@ -8,7 +8,7 @@ export default class BlackjackApp extends Component {
         return (
             <div>
                 <h1>Blackjack!</h1>
-                <button onClick={(event) => this.props.onStartGame()}>Start Game</button>
+                <button onClick={(event) => this.props.startGame()}>Start Game</button>
 
                 { this.props.gameStarted ? <h2>Game started!</h2> : null }
             </div>
