@@ -1,0 +1,6 @@
+pairs:
+  gd: George Dean; gdean
+  ab: Adam Berkovec; aberkovec
+email:
+  prefix: pair
+  domain: pivotal.io
