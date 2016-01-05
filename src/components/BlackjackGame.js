@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import * as BlackjackActions from '../actions/Actions';
 
 export default class BlackjackApp extends Component {
