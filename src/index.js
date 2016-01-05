@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
-import reducer from './reducers/blackjack';
+import reducer from './reducers/Reducers';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 

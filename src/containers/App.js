@@ -1,10 +1,10 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux'
-import * as BlackjackActions from '../actions/BlackjackActions';
-import BlackjackApp from './BlackjackApp';
+import * as BlackjackActions from '../actions/Actions';
+import BlackjackGame from './../components/BlackjackGame';
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(BlackjackActions, dispatch)
 }
 
-export default connect((state) => state, mapDispatchToProps)(BlackjackApp)
+export default connect((state) => state, mapDispatchToProps)(BlackjackGame)
