@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './Card'
 
 export default class Hand extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class Hand extends Component {
 
     renderCard(card) {
         return (
-            <div>{card.number} of {card.suit}</div>
+            <Card properties={card} />
         );
     }
 }
