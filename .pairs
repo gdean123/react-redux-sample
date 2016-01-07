@@ -1,6 +1,7 @@
 pairs:
   gd: George Dean; gdean
   ab: Adam Berkovec; aberkovec
+  ch: Christa Hartsock; chartsock
 email:
   prefix: pair
   domain: pivotal.io
