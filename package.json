@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Sample project for using react and redux",
   "scripts": {
-    "start": "node server.js",
+    "start": "gulp sass:watch & node server.js ",
     "test": "gulp jasmine"
   },
   "repository": {
