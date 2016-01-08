@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as BlackjackActions from '../actions/Actions';
 import Hand from './Hand';
 
-export default class BlackjackApp extends Component {
+export default class BlackjackGame extends Component {
     render() {
         return (
             <div>
