@@ -10,7 +10,7 @@ export default class Hand extends Component {
 
     renderCard(card) {
         return (
-            <Card properties={card} />
+            <Card number={card.number} suit={card.suit} />
         );
     }
 }
