@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Sample project for using react and redux",
   "scripts": {
-    "start": "gulp sass:watch & node server.js ",
-    "test": "gulp jasmine"
+    "start": "node server.js",
+    "test": "gulp jasmine",
+    "watch": "gulp sass:watch"
   },
   "repository": {
     "type": "git",
