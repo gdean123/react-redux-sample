@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby -w
+
+require 'thor'
+require_relative 'operation/cli.rb'
+
+Cli.start(ARGV)
