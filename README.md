@@ -1,23 +1,20 @@
 react-redux-sample
 =====================
 
-The minimal dev environment to enable live-editing React components.
-
 ### Usage
 
 ```
 npm install
-npm start
-open http://localhost:3000
-```
 
-Now edit `src/App.js`.  
-Your changes will appear without reloading the browser like in [this video](http://vimeo.com/100010922).
-
-### Linting
-
-This boilerplate project includes React-friendly ESLint configuration.
+./blackjack server          # run a development server
+./blackjack test            # run tests
+./blackjack test browser    # run tests in the browser
+./blackjack test headless   # run tests headlessly
+./blackjack watch           # run a development server
 
 ```
-npm run lint
-```
+
+open http://localhost:3000 to see the server
+open http://localhost:8888 to see the jasmine tests
+
+Now edit a file. Your changes will appear without reloading the browser.
