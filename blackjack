@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby -w
 
+$thor_runner = false
+
 require 'thor'
 require_relative 'operation/cli.rb'
 
