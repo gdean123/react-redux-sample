@@ -15,6 +15,7 @@ npm install
 ```
 
 open http://localhost:3000 to see the server
+
 open http://localhost:8888 to see the jasmine tests
 
 Now edit a file. Your changes will appear without reloading the browser.
