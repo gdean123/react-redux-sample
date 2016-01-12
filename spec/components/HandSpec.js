@@ -22,7 +22,7 @@ describe('Hand', function () {
 
     it('renders one facedown card when dealer is true', function(){
         var hand = render(<Hand cards={[eightOfSpades, fourOfHearts]} dealer={true}/>);
-        expect(hand.element.innerText).toContain("HIDDEN");
+        expect(hand.element.innerText).not.toContain("8 of spades");
         expect(hand.element.innerText).toContain("4 of hearts");
     });
 });

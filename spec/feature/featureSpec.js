@@ -17,6 +17,8 @@ describe('Starting a game', function() {
 
         expect('#root h2').toHaveText('Game started!');
         expect('#root .card').toHaveLength(4);
-        expect('#root .card.facedown').toHaveLength(1);
+        expect('#root .dealer-hand .card').toHaveLength(2);
+        expect('#root .your-hand .card').toHaveLength(2);
+        expect('#root .dealer-hand .card.facedown').toHaveLength(1);
     });
 })

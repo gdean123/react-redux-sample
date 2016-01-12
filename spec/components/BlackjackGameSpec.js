@@ -1,9 +1,7 @@
 import React from 'react';
 import BlackjackGame from '../../src/components/BlackjackGame';
 import TestUtils from 'react/lib/ReactTestUtils';
-import { render, shallowRender } from '../support/Render';
-import Hand from '../../src/components/Hand';
-import * as BlackjackActions from '../../src/actions/Actions';
+import { render } from '../support/Render';
 
 describe('BlackjackGame', function () {
     var blackjackGame;

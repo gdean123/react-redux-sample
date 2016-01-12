@@ -5,7 +5,7 @@ export default class Card extends Component {
         var cardText, cardClass;
 
         if (this.props.facedown){
-            cardText = 'HIDDEN';
+            cardText = ' ';
             cardClass = 'facedown';
         }
         else {

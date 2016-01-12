@@ -18,8 +18,14 @@ export default class BlackjackGame extends Component {
         return (
             <div>
                 <h2>Game started!</h2>
-                <Hand cards={this.props.playerHand} />
-                <Hand cards={this.props.dealerHand} dealer={true} />
+                <div className='hand dealer-hand'>
+                    <h3>Dealer's Hand!</h3>
+                    <Hand cards={this.props.dealerHand} dealer={true} />
+                </div>
+                <div className='hand your-hand'>
+                    <h3>Your Hand!</h3>
+                    <Hand cards={this.props.playerHand} />
+                </div>
             </div>
         )
     }
