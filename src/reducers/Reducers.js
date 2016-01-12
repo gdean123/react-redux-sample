@@ -13,7 +13,8 @@ export default function reducer(state = initialState, action) {
             return {
                 ...state,
                 gameStarted: true,
-                playerHand: _.range(2).map(function() { return deck.getCard() })
+                playerHand: _.range(2).map(function() { return deck.getCard() }),
+                dealerHand: _.range(2).map(function() { return deck.getCard() })
             }
     }
 

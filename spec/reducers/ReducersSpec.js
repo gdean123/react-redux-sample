@@ -20,6 +20,13 @@ describe('reducers', function () {
         expectToBeAValidCard(playerHand[1]);
     });
 
+    it ('initializes dealer hand when the START_GAME action is called', function() {
+        var dealerHand = reducer(initialState, startGame()).dealerHand;
+
+        expect(dealerHand.length).toEqual(2);
+        expectToBeAValidCard(dealerHand[0]);
+        expectToBeAValidCard(dealerHand[1]);
+    });
     function expectToBeAValidCard(card) {
         expect(card.number).toMatch(/\d+/);
         expect(['clubs', 'diamonds', 'hearts', 'spades']).toContain(card.suit);

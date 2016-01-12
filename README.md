@@ -10,7 +10,9 @@ npm install
 ./blackjack test            # run tests
 ./blackjack test browser    # run tests in the browser
 ./blackjack test headless   # run tests headlessly
-./blackjack watch           # run a development server
+./blackjack watch           # run sass:watch
+./blackjack dev             # run a development server and watch for sass changes
+
 
 ```
 

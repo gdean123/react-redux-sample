@@ -9,3 +9,9 @@ export function render(component) {
         element: ReactDOM.findDOMNode(reactComponent)
     }
 }
+//this is a thing that could be cool to try out sometime
+export function shallowRender(component) {
+    var renderer = TestUtils.createRenderer();
+    renderer.render(component);
+    return renderer.getRenderOutput();
+}
