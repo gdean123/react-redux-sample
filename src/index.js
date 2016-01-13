@@ -6,6 +6,8 @@ import reducer from './reducers/Reducers';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux';
 
+import './stylesheets/index.sass';
+
 const store = createStore(reducer);
 
 ReactDOM.render(

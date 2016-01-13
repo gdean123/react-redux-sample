@@ -36,15 +36,3 @@ gulp.task('jasmine-headless', function () {
         .pipe(jasmineBrowser.specRunner({console: true}))
         .pipe(jasmineBrowser.headless({driver: 'phantomjs'}));
 });
-
-gulp.task('sass', function () {
-    return gulp.src(path.join(__dirname, 'src/stylesheets/**/*.sass'))
-        .pipe(sass())
-        .pipe(gulp.dest(path.join(__dirname, 'tmp')))
-        .pipe(concat('bundle.css'))
-        .pipe(gulp.dest(path.join(__dirname, 'assets')));
-});
-
-gulp.task('sass:watch', function () {
-    gulp.watch(path.join(__dirname, 'src/stylesheets/**/*.sass'), ['sass']);
-});

@@ -1,5 +1,5 @@
-import reducer from '../../src/reducers/Reducers';
-import { startGame } from '../../src/actions/Actions'
+import reducer from '../../../src/reducers/Reducers';
+import { startGame } from '../../../src/actions/Actions'
 
 describe('reducers', function () {
     const initialState = { gameStarted: false };

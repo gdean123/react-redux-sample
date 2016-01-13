@@ -1,4 +1,4 @@
-import Deck from '../../src/models/Deck'
+import Deck from '../../../src/models/Deck'
 import _ from 'lodash'
 
 describe('Deck', function () {
