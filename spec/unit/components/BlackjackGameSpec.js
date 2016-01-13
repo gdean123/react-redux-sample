@@ -4,18 +4,31 @@ import TestUtils from '../../../node_modules/react/lib/ReactTestUtils';
 import { render } from '../../helpers/Render';
 
 describe('BlackjackGame', function () {
-    var blackjackGame;
-
-    beforeEach(function() {
-        blackjackGame = render(<BlackjackGame startGame={jasmine.createSpy("startGame")}/>);
+  describe('before the game has started', function () {
+    beforeEach(function () {
+      this.startGameSpy = jasmine.createSpy("startGame");
+      this.blackjackGame = render(<BlackjackGame startGame={this.startGameSpy}/>);
     });
 
-    it('renders without problems', function () {
-        expect(blackjackGame.element.innerText).toContain("Blackjack!");
+    describe('when the start game button is clicked', function () {
+      beforeEach(function () {
+        TestUtils.Simulate.click(this.blackjackGame.element.getElementsByTagName('button')[0]);
+      });
+
+      it('triggers a START_GAME action', function () {
+        expect(this.blackjackGame.component.props.startGame).toHaveBeenCalled();
+      });
+    });
+  });
+
+  describe('when the game has started', function () {
+    beforeEach(function () {
+      this.startGameSpy = jasmine.createSpy("startGame");
+      this.blackjackGame = render(<BlackjackGame startGame={this.startGameSpy} gameStarted={true} />);
     });
 
-    it('triggers a START_GAME action when the start game button is clicked', function() {
-        TestUtils.Simulate.click(blackjackGame.element.getElementsByTagName('button')[0]);
-        expect(blackjackGame.component.props.startGame).toHaveBeenCalled();
+    it('hides the start game button', function () {
+      expect($(this.blackjackGame.element).find('button:contains("Start Game")')).not.toExist();
     });
+  });
 });
