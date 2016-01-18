@@ -1,4 +1,4 @@
-describe('Starting a game', function() {
+describe('When playing a blackjack! game!! :) WOOOOOOOO :D', function() {
   beforeEach(function() {
     require('jasmine_dom_matchers');
     $('body').append('<div id="root"></div>');
@@ -7,6 +7,7 @@ describe('Starting a game', function() {
 
   afterEach(function() {
     $('body').find('#root').remove();
+    delete require.cache[require.resolve('./../../src/index')];
   });
 
   it('renders a dealer hand and a player hand', function() {
@@ -22,5 +23,17 @@ describe('Starting a game', function() {
 
     expect(dealerHand.find('.facedown')).toHaveLength(1);
     expect(yourHand.find('.facedown')).toHaveLength(0);
+  });
+
+  describe('when you click HIT', function () {
+
+
+    it('gives the player a random card from the deck', function () {
+      $('button:contains("Start Game")').click();
+      var yourHand = $('#root .hand:contains("Your Hand")');
+      $('button:contains("HIT")').click();
+
+      expect(yourHand.find('.card')).toHaveLength(3);
+    });
   });
 });

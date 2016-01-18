@@ -29,7 +29,7 @@ module.exports = () => {
         test: /\.(scss|sass)$/,
         include: path.join(__dirname, 'src'),
         loader: ExtractTextPlugin.extract('style', 'css!sass?indentedSyntax')
-      }]
+  }]
     },
     plugins: [
       new ExtractTextPlugin('[name].css'),

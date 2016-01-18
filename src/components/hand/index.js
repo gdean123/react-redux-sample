@@ -23,7 +23,5 @@ Hand.defaultProps = {
   dealer: false
 };
 
-//export const DealerHand = ({ cards }) => (<Hand dealer={true} label={'Dealer\'s Hand'} cards={cards} />);
 export const DealerHand = ({ cards }) => (Hand({ cards, label: 'Dealer\'s Hand', dealer: true }));
-//export const PlayerHand = ({ cards }) => (<Hand label={'Your Hand'} cards={cards} />);
 export const PlayerHand = ({ cards }) => (Hand({ cards, label: 'Your Hand' }));

@@ -20,3 +20,19 @@ export default class Deck {
         return this.cards.pop();
     }
 }
+
+function Deck() {
+    const numbers = _.range(1, 14);
+    const suits = ['spades', 'hearts', 'clubs', 'diamonds'];
+    let cards = [];
+
+    for (let number of numbers) {
+        for (let suit of suits) {
+            cards.push({ number: number, suit: suit });
+        }
+    }
+
+    return knuthShuffle(cards);
+}
+
+// right now deck is mutable, which is bad

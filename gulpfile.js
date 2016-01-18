@@ -19,13 +19,6 @@ var webpackConfiguration = {
     }
 };
 
-gulp.task('jasmine', function () {
-    return gulp.src(['spec/**/*Spec.js'])
-        .pipe(webpack(objectAssign({}, webpackConfiguration, {watch: true})))
-        .pipe(jasmineBrowser.specRunner())
-        .pipe(jasmineBrowser.server({whenReady: plugin.whenReady}));
-});
-
 gulp.task('jasmine-headless', function () {
     return gulp.src([
         './node_modules/babel-polyfill/dist/polyfill.js',

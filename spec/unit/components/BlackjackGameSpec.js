@@ -31,4 +31,16 @@ describe('BlackjackGame', function () {
       expect($(this.blackjackGame.element).find('button:contains("Start Game")')).not.toExist();
     });
   });
+
+  describe('when the hit button is clicked', function () {
+    beforeEach(function () {
+      this.hitSpy = jasmine.createSpy("hit");
+      this.blackjackGame = render(<BlackjackGame  hit={this.hitSpy} gameStarted={true} />);
+    });
+
+    it('triggers a HIT action', function () {
+      TestUtils.Simulate.click(this.blackjackGame.element.getElementsByTagName('button')[0]);
+      expect(this.blackjackGame.component.props.hit).toHaveBeenCalled();
+    })
+  });
 });
